@@ -1,1 +1,41 @@
 # CNN Dermoscopic Image Classification: HAM10000
+
+## Introduction
+Skin cancer is the number one type of cancer affecting people in the U. S., accounting for at least 9,500 diagnoses each day (The Skin Cancer Foundation [TSCF], 2019).  Estimated skin cancer cost is 8.1 Billion a year: However, about 18,000 people die in the U. S. from skin cancer each year (TSCF, 2019).  Early treatment of skin cancer improves patient survival rate, which is additionally dependent on early stage detection (TSCF, 2019).  According to the European Society for Medical Oncology [ESMO] (2018) a study using a convolutional neural network (CNN) outperformed experienced dermatologists at melanoma detection from images at a rate of 95% for the CNN and 88.9% for the dermatologists (ESMO, 2018).
+
+## System
+This project includes Python 3.7 using Keras with TensorFlow backend in a Jupyter Notebook.  This notebook was run on a laptop with a GTX 1070 GPU.  The available GPU, GPU:0 with 6372 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1070, compute capability: 6.1), significantly limited building a much deeper model. 
+
+## Dataset
+The dataset used for this image classification project was a collection of 10015 dermoscopic images sized at 600x450 pixels obtained from the Harvard Dataverse website (Tschandl, 2018).  There were seven classes of previously cropped and centered skin lesion images: Actinic keratoses (akiec), basal cell carcinoma (bcc), benign keratosis-like lesions (bkl), dermatofibroma (df), melanoma (mel), melanocytic nevi (nv), and vascular lesions (vasc) (Tschandl, Rosendahl, & Kittler, 2018).  Digital dermatoscope images produce moderately low noise levels and relatively uniform background illumination (Kinyanjui, 2019).  
+
+## Exploratory Data Analysis
+Although exploratory data analysis (EDA) performed was wide ranging, the primary consideration was the relative differences between class (cell_type) counts.  The Cell Type by Count graph, Figure 1: Cell Type Count, showed that the dataset was highly imbalanced with one class of seven, Melanocytic nevi, filling 67% of the space.  Between the imbalance bias, resizing the image size from 650x450 to 160x120 (a 93%-pixel count reduction), and image color similarity this classification problem was an especially difficult exercise regarding model tweaking and test accuracy performance.
+
+## Methods
+Classification of the skin lesion images involved resizing the images, data standardization, creating train, test, and validations sets, reshaping images to 3 dimensions, CNN model architecting, and data augmentation.  Image resizing necessitated reducing the input size from 600x450 to 160x120 to account for compute limitations. Creating train, test, and validations sets involved splitting the data into train and test sets and then creating a validation set from the resulting train set.  Data split was train/test 0.80/0.20 and validation spit was train/validate from the remaining train set, Table 1: Data Shape.  The mean and standard deviation used was to transform the data, which can help improve convergence (Brownlee, 2016).
+
+## The Test Model 
+This project also included a test model, which was provided primarily as an example starting point.  The test model involved running with and without data augmentation. The final model architecture decision occurred after many trial and error experiments.  In addition, experimentation with the learning rate reduction and data augmentation in the test model showed that examples set by others were either close to or dead on the choices made here. It was obvious from the test model performance that a different model architecture 
+
+## The Final CNN Model (Model 4) Architecture
+Model 4 input included 160x120 3 channel images resized from 600x450. This final model included 9 convolutions in 4 groups, a 2 dense group, flatten, and the output layer. Conv Group 1 had three convolutions: A slightly different approach than usual.  Conv Layers Groups 2, 3, and 4 each contained two convolutions. In addition, the input convolution (conv layer 1) had 16 kernel filters while the following two convolutions in group 1 each included 32 kernel filters.  For the dense layers 1024 kernels worked better than larger or smaller sized kernels.  Each convolution layer included 3x3 filters, which is best to discern small and local features (Ramesh, 2018).  Also included were BatchNormalization, MaxPooling2D, and Dropout layers. An added kernel regulizer l2 set at 0.001 to help manage overfitting was added to each Conv2D and to each Dense layer. Adam optimizer produced better results than other optimizers.
+
+## Model 4 Scores 
+Primary metric was the CNN Score.  CNN score is also referenced as the test score or as the classification score.  Other metrics included area under curve (AUC), f1 scores, and a confusion matrix.  An AUC may have been a better indicator of how well of a fit the model is than the CNN score (Brownlee, 2019).  CNN scores were very close to one another. The best test score was 80.38% (run #4) and the best AUC Score was 0.7872 (run #5).  The average difference between CNN and AUC scores was 2.6 %. Shown in Table 2: Model 4 Scores below were scores for separate runs and the average for each score type.  Score types included CNN (test) score, AUC Score, and f1 scores.  Important f1 scores for this project were model accuracy, melanoma, and basil cell (carcinoma). 
+
+## Conclusion
+This model generally performed well, although there was a slight overfit.  It is likely that the accuracy result could have been improved by using a larger sized image input, a much greater number of images, a much larger compute capability, and possibly using a transfer learning model or the weights, such as from ResNet, Inception, or VGG.  A truer representation of the model accuracy and fit may have been to combine and average the CNN average score and the AUC average: (0.8014 + 0.7805)/2 = 0.7909.  In addition, samples for each class could be more similar in distribution to produce a better accuracy without overfitting.
+
+## References
+Brownlee, J. (2016). How to normalize and standardize time series data in Python. Retrieved from https://machinelearningmastery.com/normalize-standardize-time-series-data-python/
+
+Brownlee, J. (2019). How to use ROC curves and precision-recall curves for classification in Python. Retrieved from https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/
+
+European Society for Medical Oncology. (2018, May 28). Man against machine: AI is better than dermatologists at diagnosing skin cancer. ScienceDaily. Retrieved January 14, 2020 from www.sciencedaily.com/releases/2018/05/180528190839.htm
+
+Kinyanjui, N. M. (2019). Estimating skin tone and effects on classification performance in dermatology datasets. Retrieved from http://krvarshney.github.io/pubs/KinyanjuiOCCPSV_fmlh2019.pdf
+
+Ramesh, S. (2018). A guide to an efficient way to build neural network architectures- Part II: Hyper-parameter selection and tuning for convolutional neural networks using Hyperas on Fashion-MNIST. Retrieved from https://towardsdatascience.com/a-guide-to-an-efficient-way-to-build-neural-network-architectures-part-ii-hyper-parameter-42efca01e5d7 2/
+
+The Skin Cancer Foundation. (2019). Skin cancer facts & statistics. Retrieved from https://www.skincancer.org/skin-cancer-information/skin-cancer-facts/
