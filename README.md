@@ -1,1 +1,1 @@
-# CNN-Dermoscopic-Image-Classification_HAM10000
+# CNN Dermoscopic Image Classification HAM10000
