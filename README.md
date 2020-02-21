@@ -42,3 +42,8 @@ Kinyanjui, N. M. (2019). Estimating skin tone and effects on classification perf
 Ramesh, S. (2018). A guide to an efficient way to build neural network architectures- Part II: Hyper-parameter selection and tuning for convolutional neural networks using Hyperas on Fashion-MNIST. Retrieved from https://towardsdatascience.com/a-guide-to-an-efficient-way-to-build-neural-network-architectures-part-ii-hyper-parameter-42efca01e5d7 2/
 
 The Skin Cancer Foundation. (2019). Skin cancer facts & statistics. Retrieved from https://www.skincancer.org/skin-cancer-information/skin-cancer-facts/
+
+Tschandl, P.  (2018). The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions. https://doi.org/10.7910/DVN/DBW86T, Harvard Dataverse, V1, UNF:6:IQTf5Cb+3EzwZ95U5r0hnQ== [fileUNF]
+
+Tschandl, P., Rosendahl, C, & Kittler, H.  (2018). The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions. Sci. Data 5:180161 doi: 10.1038/sdata.2018.161.
+
