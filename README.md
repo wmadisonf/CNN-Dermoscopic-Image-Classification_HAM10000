@@ -7,7 +7,7 @@ Skin cancer is the number one type of cancer affecting people in the U. S., acco
 This project includes Python 3.7 using Keras with TensorFlow backend in a Jupyter Notebook.  This notebook was run on a laptop with a GTX 1070 GPU.  The available GPU, GPU:0 with 6372 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1070, compute capability: 6.1), significantly limited building a much deeper model. 
 
 ## Dataset
-The dataset used for this image classification project was a collection of 10015 dermoscopic images sized at 600x450 pixels obtained from the Harvard Dataverse website (Tschandl, 2018). There were seven classes of previously cropped and centered skin lesion images: Actinic keratoses (akiec), basal cell carcinoma (bcc), benign keratosis-like lesions (bkl), dermatofibroma (df), melanoma (mel), melanocytic nevi (nv), and vascular lesions (vasc) (Tschandl, Rosendahl, & Kittler, 2018).  Digital dermatoscope images produce moderately low noise levels and relatively uniform background illumination (Kinyanjui, 2019).  
+The dataset used for this image classification project was a collection of 10015 dermoscopic images sized at 600x450 pixels and the metadata file downloaded from the Skin Cancer MNIST: HAM10000 Kaggle website (Mader, 2019). The images folders are also available at the Harvard Dataverse website (Tschandl, 2018). There were seven classes of previously cropped and centered skin lesion images: Actinic keratoses (akiec), basal cell carcinoma (bcc), benign keratosis-like lesions (bkl), dermatofibroma (df), melanoma (mel), melanocytic nevi (nv), and vascular lesions (vasc) (Tschandl, Rosendahl, & Kittler, 2018).  Digital dermatoscope images produce moderately low noise levels and relatively uniform background illumination (Kinyanjui, 2019).  
 
 ## Exploratory Data Analysis
 Although exploratory data analysis (EDA) performed was wide ranging, the primary consideration was the relative differences between class (cell_type) counts.  The Cell Type by Count graph, Figure 1: Cell Type Count, showed that the dataset was highly imbalanced with one class of seven, Melanocytic nevi, filling 67% of the space.  Between the imbalance bias, resizing the image size from 650x450 to 160x120 (a 93%-pixel count reduction), and image color similarity this classification problem was an especially difficult exercise regarding model tweaking and test accuracy performance.
@@ -39,6 +39,8 @@ Brownlee, J. (2019b). How to use ROC curves and precision-recall curves for clas
 European Society for Medical Oncology. (2018, May 28). Man against machine: AI is better than dermatologists at diagnosing skin cancer. ScienceDaily. Retrieved January 14, 2020 from www.sciencedaily.com/releases/2018/05/180528190839.htm
 
 Kinyanjui, N. M. (2019). Estimating skin tone and effects on classification performance in dermatology datasets. Retrieved from http://krvarshney.github.io/pubs/KinyanjuiOCCPSV_fmlh2019.pdf
+
+Mader, K. (2019). Skin cancer MNIST: HAM10000. Retrived from https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000/download
 
 Ramesh, S. (2018). A guide to an efficient way to build neural network architectures- Part II: Hyper-parameter selection and tuning for convolutional neural networks using Hyperas on Fashion-MNIST. Retrieved from https://towardsdatascience.com/a-guide-to-an-efficient-way-to-build-neural-network-architectures-part-ii-hyper-parameter-42efca01e5d7 2/
 
