@@ -9,7 +9,7 @@ This project includes Python 3.7 using Keras with TensorFlow backend in a Jupyte
 ## Model Build Objectives
 There are three main objectives of this project involving building a Keras sequential image classification model on a laptop.
 But first, let’s look at the issues this data and available resources presents.
-The major problem is that the data is heavily biased in favor of a single class (Melanocytic nevi) of seven, which accounts for 67% of the data, shown in 3.1 Cell Type Count.  Other factors include similarities in color and a relatively small dataset for image classification.  In addition, the model architecture and subsequent performance is affected by image down-sizing [from 600x400 to 160x120] resolution and a limited amount of resource memory (i.e., compute power). 
+The major problem is that the data is heavily biased in favor of a single class (Melanocytic nevi) of seven, which accounts for 67% of the data, shown in Figure 1.  Other factors include similarities in color and a relatively small dataset for image classification.  In addition, the model architecture and subsequent performance is affected by image down-sizing [from 600x400 to 160x120] resolution and a limited amount of resource memory (i.e., compute power). 
 
 The objectives are: 1) to significantly reduce or eliminate overfitting, 2) reach at least 80% test accuracy without violating the first objective, and 3) build a model that can work with limited resources while reaching objective 2.  The model is to be run using a GTX 1070 GPU with 6.1 GB of available memory.  Although I could use the CPU in which there is considerably more memory, time is limited and testing a wide variety of model builds using the CPU is not a viable alternative.
 
