@@ -6,6 +6,13 @@ Skin cancer is the number one type of cancer affecting people in the U. S., acco
 ## System
 This project includes Python 3.7 using Keras with TensorFlow backend in a Jupyter Notebook.  This notebook was run on a laptop with a GTX 1070 GPU.  The available GPU, GPU:0 with 6372 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1070, compute capability: 6.1), significantly limited building a much deeper model. 
 
+## Model Build Objectives
+There are three main objectives of this project involving building a Keras sequential image classification model on a laptop.
+But first, let’s look at the issues this data and available resources presents.
+The major problem is that the data is heavily biased in favor of a single class (Melanocytic nevi) of seven, which accounts for 67% of the data, shown in 3.1 Cell Type Count.  Other factors include similarities in color and a relatively small dataset for image classification.  In addition, the model architecture and subsequent performance is affected by image down-sizing [from 600x400 to 160x120] resolution and a limited amount of resource memory (i.e., compute power). 
+
+The objectives are: 1) to significantly reduce or eliminate overfitting, 2) reach at least 80% test accuracy without violating the first objective, and 3) build a model that can work with limited resources while reaching objective 2.  The model is to be run using a GTX 1070 GPU with 6.1 GB of available memory.  Although I could use the CPU in which there is considerably more memory, time is limited and testing a wide variety of model builds using the CPU is not a viable alternative.
+
 ## Dataset
 The dataset used for this image classification project was a collection of 10015 dermoscopic images sized at 600x450 pixels and the metadata file downloaded from the Skin Cancer MNIST: HAM10000 Kaggle website (Mader, 2019). The images folders are also available at the Harvard Dataverse website (Tschandl, 2018). There were seven classes of previously cropped and centered skin lesion images: Actinic keratoses (akiec), basal cell carcinoma (bcc), benign keratosis-like lesions (bkl), dermatofibroma (df), melanoma (mel), melanocytic nevi (nv), and vascular lesions (vasc) (Tschandl, Rosendahl, & Kittler, 2018).  Digital dermatoscope images produce moderately low noise levels and relatively uniform background illumination (Kinyanjui, 2019).  
 
