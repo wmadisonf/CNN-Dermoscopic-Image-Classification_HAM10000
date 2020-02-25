@@ -55,7 +55,7 @@ This model generally performed well, although there was a slight overfit.  It is
         Data size after filtering age >=55 is 4611
         Ratio of melanoma to Melanocytic nevi after filtering age >=55 improves to 38% 
         Ratio of basil cell carcinoma to Melanocytic nevi after filtering age >=55 improves to 20% 
-### Figure 1: Cell Type Count
+### Figure 2: Cell Type Count by Age
 ![](images/Cell_Type_Count_by_Age.png)
 
 ## Appendix
