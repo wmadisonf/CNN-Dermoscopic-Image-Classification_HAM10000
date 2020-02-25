@@ -42,6 +42,20 @@ Primary metric was the CNN Score.  CNN score is also referenced as the test scor
 ## Conclusion
 This model generally performed well, although there was a slight overfit.  It is likely that the accuracy result could have been improved by using a larger sized image input, a much greater number of images, a much larger compute capability, and possibly using a transfer learning model or the weights, such as from ResNet, Inception, or VGG.  A truer representation of the model accuracy and fit may have been to combine and average the CNN average score and the AUC average: (0.8014 + 0.7805)/2 = 0.7909.  In addition, samples for each class could be more similar in distribution to produce a better accuracy without overfitting.
 
+## Imbalance: Potential ad hoc solution
+    I noticed in 6.7 'Count Plot: Cell Type Count by Age' that:
+        'akiec', 'bcc', 'bkl', and 'mel' occurred far more frequently at and after age 55 and
+        'nv' occured more frequently before age 55
+    Although it would reduce the size of the data, using only the data for ages >= 55
+        would decrease the imbalance and potentially improve results 
+    For example:
+        Original data size is 10015
+        Original ratio of melanoma to Melanocytic nevi was 17%
+        Original ratio of basil cell carcinoma to Melanocytic nevi was 9%
+        Data size after filtering age >=55 is 4611
+        Ratio of melanoma to Melanocytic nevi after filtering age >=55 improves to 38% 
+        Ratio of basil cell carcinoma to Melanocytic nevi after filtering age >=55 improves to 20% 
+
 ## References
 
 Brownlee, J. (2019a) How to normalize, center, and standardize image pixels in Keras. Retrieved from https://machinelearningmastery.com/how-to-normalize-center-and-standardize-images-with-the-imagedatagenerator-in-keras/
