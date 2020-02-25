@@ -23,7 +23,7 @@ The dataset used for this image classification project was a collection of 10015
 
 ## Exploratory Data Analysis
 Although exploratory data analysis (EDA) performed was wide ranging, the primary consideration was the relative differences between cell type counts.  The Cell Type by Count graph, Figure 1: Cell Type Count, showed that the dataset was highly imbalanced with one class of seven, Melanocytic nevi, filling 67% of the space.  Between the imbalance bias, resizing the image size from 650x450 to 160x120 (a 93%-pixel count reduction), and image color similarity this classification problem was an especially difficult exercise regarding model tweaking and test accuracy performance.
-### Figure 1: Cell Type Count
+### Figure 1: 6.1 Cell Type Count
 ![](images/Cell_Type_Count.png)
 ## Methods
  Classification of the skin lesion images involved resizing the images, data standardization, creating train, test, and validations sets, reshaping images to 3 dimensions, CNN model architecting, and data augmentation.  Image resizing necessitated reducing the input size from 600x450 to 160x120 to account for compute limitations. Creating train, test, and validations sets involved splitting the data into train and test sets and then creating a validation set from the resulting train set.  Data split was train/test 0.80/0.20 and validation spit was train/validate from the remaining train set, Table 1: Data Shape.  Pixel standardization (mean and standard deviation, feature-wise in this case) was chosen over normalization (scale range 0-1) and pixel centering (zero mean) because it is typically the most commonly applied method for this type of data (Brownlee, 2019a). 
@@ -37,7 +37,7 @@ Model 4 input included 160x120 3 channel images resized from 600x450. This final
 
 ## Model 4 Scores 
 Primary metric was the CNN Score.  CNN score is also referenced as the test score or as the classification score.  Other metrics included area under curve (AUC), f1 scores, and a confusion matrix.  An AUC may have been a better indicator of how well of a fit the model is than the CNN score (Brownlee, 2019b).  CNN scores were very close to one another. The best test score was 80.38% (run #4) and the best AUC Score was 0.7872 (run #5).  The average difference between CNN and AUC scores was 2.6 %. Shown in Table 2: Model 4 Scores below were scores for separate runs and the average for each score type.  Score types included CNN (test) score, AUC Score, and f1 scores.  Important f1 scores for this project were model accuracy, melanoma, and basil cell (carcinoma). 
-### Table 2: Model 4 Scores 
+### Table 2: 10.1 Table 1
 ![](images/Scores_Table.png)
 ## Conclusion
 This model generally performed well, although there was a slight overfit.  It is likely that the accuracy result could have been improved by using a larger sized image input, a much greater number of images, a much larger compute capability, and possibly using a transfer learning model or the weights, such as from ResNet, Inception, or VGG.  A truer representation of the model accuracy and fit may have been to combine and average the CNN average score and the AUC average: (0.8014 + 0.7805)/2 = 0.7909.  In addition, samples for each class could be more similar in distribution to produce a better accuracy without overfitting.
