@@ -56,6 +56,37 @@ This model generally performed well, although there was a slight overfit.  It is
         Ratio of melanoma to Melanocytic nevi after filtering age >=55 improves to 38% 
         Ratio of basil cell carcinoma to Melanocytic nevi after filtering age >=55 improves to 20% 
 
+## Appendix
+    Things that did not do well or improve scores
+         Data Augmentation: A wide range of augmentations were attempted 
+            Scaling
+            Shearing
+            Different rotation variations made little difference
+            Vertical flip in tandem with Horizontal flip
+            Using ranges (e.g., [0.1,0.7]) caused model to under perform
+         Model Architecture
+            Gausian Noise
+            SGD Optimizer
+            he_normal initializer
+            regularizer l1
+            MaxPooling2D(2,2)
+            regularizer l2 greater than 0.01
+         Class Weights
+            Adjusting class weights to compensate for the imbalance 
+
+    Things that worked best
+         Data Augmentation
+            Rotation - best at 20
+            width shift - best at 0.1
+            height shift - best at 0.1
+            zoom range - best at 0.1
+            horizontal flip
+         Model Architecture
+            Adam optimizer at defaults
+            regularizer l2
+            Batch Normalization
+            MaxPooling2D()
+            Dropout(0.25)
 ## References
 
 Brownlee, J. (2019a) How to normalize, center, and standardize image pixels in Keras. Retrieved from https://machinelearningmastery.com/how-to-normalize-center-and-standardize-images-with-the-imagedatagenerator-in-keras/
