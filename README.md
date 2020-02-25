@@ -42,7 +42,7 @@ Primary metric was the CNN Score.  CNN score is also referenced as the test scor
 ## Conclusion
 This model generally performed well, although there was a slight overfit.  It is likely that the accuracy result could have been improved by using a larger sized image input, a much greater number of images, a much larger compute capability, and possibly using a transfer learning model or the weights, such as from ResNet, Inception, or VGG.  A truer representation of the model accuracy and fit may have been to combine and average the CNN average score and the AUC average: (0.8014 + 0.7805)/2 = 0.7909.  In addition, samples for each class could be more similar in distribution to produce a better accuracy without overfitting.
 
-## Imbalance: Potential ad hoc solution
+## Disttribution Imbalance: Potential ad hoc solution
     I noticed in 6.7 'Count Plot: Cell Type Count by Age' that:
         'akiec', 'bcc', 'bkl', and 'mel' occurred far more frequently at and after age 55 and
         'nv' occured more frequently before age 55
