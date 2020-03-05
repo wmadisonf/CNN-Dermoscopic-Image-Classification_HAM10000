@@ -1,0 +1,14 @@
+HAM 10000: Distribution before and after filtering by age >= 55		
+
+
+
+	Orginal Data Size			Filtered Data Size Age >= 55		
+Cell Type	Count	% Rep	Imbalance Ratio	Count	% Rep	Rebalanced Ratio
+nv       	6705	66.9%	1.000	                  2106	45.7%	1.000
+mel      	1113	11.1%	0.166	                  799	17.3%	0.379
+bkl      	1099	11.0%	0.164	                  861	18.7%	0.409
+bcc      	514	5.1%	0.077	                  425	9.2%	0.202
+akiec     	327	3.3%	0.049	                  288	6.2%	0.137
+vasc      	142	1.4%	0.021	                  56	1.2%	0.027
+df        	115	1.1%	0.017	                  76	1.6%	0.036
+	10015			                  4611	
