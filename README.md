@@ -1,9 +1,8 @@
 # CNN Dermoscopic Image Classification: HAM10000
+[PracticumVideo](https://youtu.be/FpzQE9GftNc)
 
 ## Introduction
 Skin cancer is the number one type of cancer affecting people in the U. S., accounting for at least 9,500 diagnoses each day (The Skin Cancer Foundation [TSCF], 2019).  Estimated skin cancer cost is 8.1 Billion a year: However, about 18,000 people die in the U. S. from skin cancer each year (TSCF, 2019).  Early treatment of skin cancer improves patient survival rate, which is additionally dependent on early stage detection (TSCF, 2019).  According to the European Society for Medical Oncology [ESMO] (2018) a study using a convolutional neural network (CNN) outperformed experienced dermatologists at melanoma detection from images at a rate of 95% for the CNN and 88.9% for the dermatologists (ESMO, 2018).
-
-[PracticumVideo](https://youtu.be/FpzQE9GftNc)
 
 ## System
 This project includes Python 3.7 using Keras with TensorFlow backend in a Jupyter Notebook.  This notebook was run on a laptop with a GTX 1070 GPU.  The available GPU, GPU:0 with 6372 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1070, compute capability: 6.1), significantly limited building a much deeper model. 
