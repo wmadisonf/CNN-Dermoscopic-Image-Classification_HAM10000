@@ -57,8 +57,9 @@ This model generally performed well, although there was a slight overfit.  It is
         Ratio of melanoma to Melanocytic nevi after filtering age >=55 improves to 38% 
         Ratio of basil cell carcinoma to Melanocytic nevi after filtering age >=55 improves to 20% 
 ### Figure 2: 6.7 Cell Type Count by Age
-![](images/Cell_Type_Count_by_Age.png)
 [RebalanceTable](https://github.com/wmadisonf/CNN-Dermoscopic-Image-Classification_HAM10000/blob/master/Rebalance%20by%20Age.txt)
+![](images/Cell_Type_Count_by_Age.png)
+
 ## Appendix
     Things that did not do well or improve scores
          Data Augmentation: A wide range of augmentations were attempted 
