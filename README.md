@@ -25,7 +25,7 @@ The dataset used for this image classification project was a collection of 10015
 ## Exploratory Data Analysis
 Although exploratory data analysis (EDA) performed was wide ranging, the primary consideration was the relative differences between cell type counts.  The Cell Type by Count graph, Figure 1: Cell Type Count, showed that the dataset was highly imbalanced with one class of seven, Melanocytic nevi, filling 67% of the space.  Between the imbalance bias, resizing the image size from 650x450 to 160x120 (a 93%-pixel count reduction), and image color similarity this classification problem was an especially difficult exercise regarding model tweaking and test accuracy performance.
 ### Figure 1: 6.1 Cell Type Count
-![](Cell_Type_Count_red.png)
+![](images/Cell_Type_Count_red.png)
 ## Methods
  Classification of the skin lesion images involved resizing the images, data standardization, creating train, test, and validations sets, reshaping images to 3 dimensions, CNN model architecting, and data augmentation.  Image resizing necessitated reducing the input size from 600x450 to 160x120 to account for compute limitations. Creating train, test, and validations sets involved splitting the data into train and test sets and then creating a validation set from the resulting train set.  Data split was train/test 0.80/0.20 and validation spit was train/validate from the remaining train set, Table 1: Data Shape.  Pixel standardization (mean and standard deviation, feature-wise in this case) was chosen over normalization (scale range 0-1) and pixel centering (zero mean) because it is typically the most commonly applied method for this type of data (Brownlee, 2019a). 
 ### Table 1: Data Shape
