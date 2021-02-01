@@ -1,4 +1,4 @@
-# CNN Dermoscopic Image Classification: HAM10000
+# CNN Dermoscopic Image Classification: HAM10000 
 [MyPracticumVideo](https://youtu.be/FpzQE9GftNc) 
 
 ## Introduction 
