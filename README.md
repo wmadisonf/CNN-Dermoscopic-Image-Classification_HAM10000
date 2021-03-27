@@ -18,7 +18,7 @@ The objectives are:
 3) build a model that can work with limited resources while reaching objective 2.  
 
 The model is to be run using a GTX 1070 GPU with 6.1 GB of available memory.  Although I could use the CPU in which there is considerably more memory, time is limited and testing a wide variety of model builds using the CPU is not a viable alternative.
-
+  
 ## Dataset
 The dataset used for this image classification project was a collection of 10015 dermoscopic images sized at 600x450 pixels and the metadata file downloaded from the Skin Cancer MNIST: HAM10000 Kaggle website (Mader, 2019). The images folders are also available at the Harvard Dataverse website (Tschandl, 2018). There were seven classes of previously cropped and centered skin lesion images: Actinic keratoses (akiec), basal cell carcinoma (bcc), benign keratosis-like lesions (bkl), dermatofibroma (df), melanoma (mel), melanocytic nevi (nv), and vascular lesions (vasc) (Tschandl, Rosendahl, & Kittler, 2018).  Digital dermatoscope images produce moderately low noise levels and relatively uniform background illumination (Kinyanjui, 2019).  
 
