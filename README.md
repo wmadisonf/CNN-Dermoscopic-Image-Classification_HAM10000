@@ -30,7 +30,7 @@ Although exploratory data analysis (EDA) performed was wide ranging, the primary
  Classification of the skin lesion images involved resizing the images, data standardization, creating train, test, and validations sets, reshaping images to 3 dimensions, CNN model architecting, and data augmentation.  Image resizing necessitated reducing the input size from 600x450 to 160x120 to account for compute limitations. Creating train, test, and validations sets involved splitting the data into train and test sets and then creating a validation set from the resulting train set.  Data split was train/test 0.80/0.20 and validation spit was train/validate was 0.87/0.13 from the remaining train set, Table 1: Data Shape.  Pixel standardization (mean and standard deviation, feature-wise in this case) was chosen over normalization (scale range 0-1) and pixel centering (zero mean) because it is typically the most commonly applied method for this type of data (Brownlee, 2019a). 
 ### Table 1: Data Shape
 ![](images/Shape_Parameters.png)
-## The Test Model 
+## The Test Model   
 This project also included a test model, which was provided primarily as an example starting point.  The test model involved running with and without data augmentation. The final model architecture decision occurred after many trial and error experiments.  In addition, experimentation with the learning rate reduction and data augmentation in the test model showed that examples set by others were either close to or dead on the choices made here. It was obvious from the test model performance that a different model architecture would be necessary.
 
 ## The Final CNN Model (Model 4) Architecture
