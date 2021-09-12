@@ -93,7 +93,7 @@ This model generally performed well, although there was a slight overfit.  It is
             MaxPooling2D()
             Dropout(0.25)
 ## References
-
+  
 Brownlee, J. (2019a) How to normalize, center, and standardize image pixels in Keras. Retrieved from https://machinelearningmastery.com/how-to-normalize-center-and-standardize-images-with-the-imagedatagenerator-in-keras/
 
 Brownlee, J. (2019b). How to use ROC curves and precision-recall curves for classification in Python. Retrieved from https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/
