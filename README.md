@@ -32,7 +32,7 @@ Although exploratory data analysis (EDA) performed was wide ranging, the primary
 ![](images/Shape_Parameters.png)
 ## The Test Model   
 This project also included a test model, which was provided primarily as an example starting point.  The test model involved running with and without data augmentation. The final model architecture decision occurred after many trial and error experiments.  In addition, experimentation with the learning rate reduction and data augmentation in the test model showed that examples set by others were either close to or dead on the choices made here. It was obvious from the test model performance that a different model architecture would be necessary.
- 
+  
 ## The Final CNN Model (Model 4) Architecture
 Model 4 input included 160x120 3 channel images resized from 600x450. This final model included 9 convolutions in 4 groups, a 2 dense group, flatten, and the output layer. Conv Group 1 had three convolutions: A slightly different approach than usual.  Conv Layers Groups 2, 3, and 4 each contained two convolutions. In addition, the input convolution (conv layer 1) had 16 kernel filters while the following two convolutions in group 1 each included 32 kernel filters.  For the dense layers 1024 kernels worked better than larger or smaller sized kernels.  Each convolution layer included 3x3 filters, which is best to discern small and local features (Ramesh, 2018).  Also included were BatchNormalization, MaxPooling2D, and Dropout layers. An added kernel regulizer l2 set at 0.001 to help manage overfitting was added to each Conv2D and to each Dense layer. Adam optimizer produced better results than other optimizers.
 
