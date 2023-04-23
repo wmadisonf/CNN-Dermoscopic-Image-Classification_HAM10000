@@ -92,7 +92,7 @@ This model generally performed well, although there was a slight overfit.  It is
             Batch Normalization
             MaxPooling2D()
             Dropout(0.25)
-## References
+## References  
   
 Brownlee, J. (2019a) How to normalize, center, and standardize image pixels in Keras. Retrieved from https://machinelearningmastery.com/how-to-normalize-center-and-standardize-images-with-the-imagedatagenerator-in-keras/
 
