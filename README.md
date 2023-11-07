@@ -6,7 +6,7 @@ Skin cancer is the number one type of cancer affecting people in the U. S., acco
   
 ## System     
 This project includes Python 3.7 using Keras with TensorFlow backend in a Jupyter Notebook.  This notebook was run on a laptop with a GTX 1070 GPU.  The available GPU, GPU:0 with 6372 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1070, compute capability: 6.1), significantly limited building a much deeper model. 
- 
+  
 ## Model Build Objectives
 There are three main objectives of this project involving building a Keras sequential image classification model on a laptop.
 But first, let’s look at the issues this data and available resources presents.
